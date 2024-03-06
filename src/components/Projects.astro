@@ -1,0 +1,86 @@
+--- 
+import GithubIcon from '../components/icons/Github2.astro' 
+import CssIcon from '../components/icons/Css.astro' 
+import ExpressIcon from '../components/icons/Express.astro' 
+import HtmlIcon from '../components/icons/Html.astro' 
+import ReactIcon from '../components/icons/React.astro' 
+import TailwindIcon from '../components/icons/Tailwind.astro' 
+import TypescriptIcon from '../components/icons/Typescript.astro' 
+import LinkIcon from '../components/icons/Link.astro' 
+
+const TAGS = {
+    Css: {
+        name: 'Css',
+        icon: CssIcon
+    },
+    Html: {
+        name: 'Html',
+        icon: HtmlIcon
+    },
+    Express: {
+        name: 'Express',
+        icon: ExpressIcon
+    },
+    React: {
+        name: 'React',
+        icon: ReactIcon
+    },
+    Tailwind: {
+        name: 'Tailwind',
+        icon: TailwindIcon
+    },
+    Typescript: {
+        name: 'Typescript',
+        icon: TypescriptIcon
+    }
+}
+
+const PROJECTS = [ 
+    {
+    title: "Landing page",
+    description: "A Web App developed for a client attending his needs and objectives",
+    link: "https://francesca-santos.web.app/",
+    github: "",
+    image:"/images/landing.png",
+    tags: [TAGS.Html, TAGS.Css, TAGS.React]
+},
+{
+    title: "Real Estate",
+    description: "Full Stack web app for renting and selling of properties",
+    link: "https://francesca-santos.web.app/",
+    github: "",
+    image:"/images/estate.png",
+    tags: [TAGS.Tailwind, TAGS.Express, TAGS.React]
+},
+{
+    title: "Weather app",
+    description: "Website that works a weather app created with Typescript and an open weather API",
+    link: "https://francesca-santos.web.app/",
+    github: "",
+    image:"/images/weather.png",
+    tags: [TAGS.Css, TAGS.Typescript, TAGS.React,]
+},
+]
+---
+
+{
+    PROJECTS.map(({ title, image, description, tags, github, link }) => (
+        <article class="shadow-lg bg-black bg-opacity-5 rounded-lg  w-full">
+            <h3 class="my-6 text-3xl text-center font-bold text-[#FF6B00]">{title}</h3>
+            <img src={image} class="w-full p-2 rounded-3xl" alt={title} />
+            <p class="my-4 text-slate-900 font-normal [text-wrap:pretty] text-left px-8">{description}</p>
+            <ul class="flex items-center justify-center gap-3 mb-2">
+                {tags.map((tag) => (
+                    <li class="flex items-center text-slate-800 gap-1 p-1.5 text-sm font-medium border border-[#025373] border-opacity-90 rounded-lg">
+                        <tag.icon class='size-4'/>
+                        {tag.name}
+                    </li>
+                ))}
+            </ul>
+            <div class="flex flex-col sm:flex-row gap-3 items-center justify-center py-5">
+                <a href={github} class="flex flex-1 gap-1 items-center justify-center mx-8 py-2.5 text-sm text-white font-medium bg-gradient-to-r from-[#037F8C] to-[#025E73] rounded-full transition duration-300  hover:scale-105">Github <GithubIcon class="w-4 h-4"/></a>
+                <a href={link} class="flex flex-1 gap-1 items-center justify-center mx-8 py-2.5 text-sm text-black font-medium bg-black bg-opacity-20 rounded-full transition duration-300 hover:scale-105">Link <LinkIcon class="w-4 h-4"/></a>
+            </div>
+        </article>
+    ))
+}

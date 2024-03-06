@@ -1,0 +1,116 @@
+---
+import GithubIcon from '../components/icons/Github.astro' 
+import CssIcon from '../components/icons/Css.astro' 
+import ExpressIcon from '../components/icons/Express.astro' 
+import HtmlIcon from '../components/icons/Html.astro' 
+import ReactIcon from '../components/icons/React.astro' 
+import TailwindIcon from '../components/icons/Tailwind.astro' 
+import TypescriptIcon from '../components/icons/Typescript.astro' 
+import JavascriptIcon from '../components/icons/Javascript.astro'
+import ReduxIcon from '../components/icons/Redux.astro'
+import AstroIcon from './icons/AstroIcon.astro'
+import NodeIcon from './icons/Node.astro'
+import MongoIcon from './icons/MongoDb.astro'
+import FirebaseIcon from './icons/Firebase.astro'
+import VsIcon from './icons/Vs.astro'
+import FigmaIcon from './icons/Figma.astro'
+
+const SKILLS = [
+    {
+        name: 'Css',
+        class: '',
+        icon: CssIcon
+    },
+    {
+        name: 'Html',
+        class: '',
+        icon: HtmlIcon
+    },
+    {
+        name: 'JavaScript',
+        class: '',
+        icon: JavascriptIcon
+    },
+    {
+        name: 'Express',
+        class: '',
+        icon: ExpressIcon
+    },
+    {
+        name: 'React',
+        class: '',
+        icon: ReactIcon
+    },
+    {
+        name: 'Tailwind',
+        class: '',
+        icon: TailwindIcon
+    },
+    {
+        name: 'Typescript',
+        class: '',
+        icon: TypescriptIcon
+    },
+    {
+        name: 'Redux',
+        class: '',
+        icon: ReduxIcon
+    },
+    {
+        name: 'Github',
+        class: '',
+        icon: GithubIcon
+    },
+    {
+        name: 'Astro',
+        class: '',
+        icon: AstroIcon
+    },
+    {
+        name: 'NodeJs',
+        class: '',
+        icon: NodeIcon
+    },
+    {
+        name: 'MongoDB',
+        class: '',
+        icon: MongoIcon
+    },
+    {
+        name: 'Firebase',
+        class: '',
+        icon: FirebaseIcon
+    },
+    {
+        name: 'VS code',
+        class: '',
+        icon: VsIcon
+    },
+    {
+        name: 'Figma',
+        class: '',
+        icon: FigmaIcon
+    },
+]
+---
+
+
+<ul class="flex flex-wrap justify-center gap-6 list-none my-10">
+    {        
+      SKILLS.map((skill) => (
+        <li class="items-center text-center flex flex-col font-bold text-xl relative group">
+          <div class="relative">
+            <skill.icon class="size-16 p-2 rounded-lg"/>
+            <div class="opacity-0 bg-black text-white text-sm rounded mb-2 py-3 px-5 absolute z-10 bottom-full left-1/2 transform -translate-x-1/2 transition-opacity duration-300 pointer-events-none group-hover:opacity-100">
+              {skill.name}
+            </div>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+  
+  
+  
+
+
