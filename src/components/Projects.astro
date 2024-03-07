@@ -41,15 +41,15 @@ const PROJECTS = [
     description: "A Web App developed for a client attending his needs and objectives",
     link: "https://francesca-santos.web.app/",
     github: "https://github.com/AbleEwe/FrancescaSantosPortfolio",
-    image:"/images/landing.png",
+    image:"/images/landing.webp",
     tags: [TAGS.Html, TAGS.Css, TAGS.React]
 },
 {
     title: "Real Estate",
     description: "Full Stack web app for renting and selling of properties",
-    link: "https://francesca-santos.web.app/",
+    link: "https://cieloestate.onrender.com",
     github: "https://github.com/AbleEwe/MERN-estate",
-    image:"/images/estate.png",
+    image:"/images/fullstack.webp",
     tags: [TAGS.Tailwind, TAGS.Express, TAGS.React]
 },
 {
@@ -57,7 +57,7 @@ const PROJECTS = [
     description: "Website that works a weather app created with Typescript and an open weather API",
     link: "https://weatherappdsm.netlify.app/",
     github: "https://github.com/AbleEwe/WeatherApp",
-    image:"/images/weather.png",
+    image:"/images/weather.webp",
     tags: [TAGS.Css, TAGS.Typescript, TAGS.React,]
 },
 ]
@@ -78,8 +78,8 @@ const PROJECTS = [
                 ))}
             </ul>
             <div class="flex flex-col sm:flex-row gap-3 items-center justify-center py-5">
-                <a href={github} class="flex flex-1 gap-1 items-center justify-center mx-8 py-2.5 text-sm text-white font-medium bg-gradient-to-r from-[#037F8C] to-[#025E73] rounded-full transition duration-300  hover:scale-105">Github <GithubIcon class="w-4 h-4"/></a>
-                <a href={link} class="flex flex-1 gap-1 items-center justify-center mx-8 py-2.5 text-sm text-black font-medium bg-black bg-opacity-20 rounded-full transition duration-300 hover:scale-105">Link <LinkIcon class="w-4 h-4"/></a>
+                <a target="_blank" href={github} class="flex flex-1 gap-1 items-center justify-center mx-8 py-2.5 text-sm text-white font-medium bg-gradient-to-r from-[#037F8C] to-[#025E73] rounded-full transition duration-300  hover:scale-105">Github <GithubIcon class="w-4 h-4"/></a>
+                <a  target="_blank" href={link} class="flex flex-1 gap-1 items-center justify-center mx-8 py-2.5 text-sm text-black font-medium bg-black bg-opacity-20 rounded-full transition duration-300 hover:scale-105">Link <LinkIcon class="w-4 h-4"/></a>
             </div>
         </article>
     ))
